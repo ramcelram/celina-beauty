@@ -1,0 +1,129 @@
+/* === Réinitialisation globale === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #ffe6ec;
+  color: #2c2c2c;
+  padding-top: 100px;
+}
+
+/* === Navbar simple (si tu veux) === */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.logo img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin-left: auto;
+  gap: 1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #2c2c2c;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #e86a93;
+}
+
+/* === Formulaire === */
+.form-section {
+  max-width: 500px;
+  background-color: #fff;
+  margin: auto;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #e86a93;
+}
+
+.form-section form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-section label {
+  margin: 10px 0 5px;
+  font-weight: bold;
+  color: #444;
+}
+
+.form-section input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.form-section input:focus {
+  border-color: #e86a93;
+  outline: none;
+}
+
+button[type="submit"] {
+  margin-top: 1.5rem;
+  padding: 12px;
+  background-color: #e86a93;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button[type="submit"]:hover {
+  background-color: #cc5c7a;
+  transform: scale(1.03);
+}
+
+/* === Récapitulatif des services === */
+#selectedServices,
+#totalAmount {
+  background-color: #fff5f8;
+  border: 1px dashed #e86a93;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* === Responsive === */
+@media (max-width: 600px) {
+  .form-section {
+    margin: 1rem;
+    padding: 1.2rem;
+  }
+}

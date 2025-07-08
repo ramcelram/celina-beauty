@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fdf6f9;
+  color: #2c2c2c;
+  line-height: 1.5;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+}
+
+.logo img {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(232, 106, 147, 0.3);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.1);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin-left: auto;
+  gap: 1.2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #2c2c2c;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.3rem 0.6rem;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #b5838d;
+  border-bottom: 2px solid #b5838d;
+}
+
+/* Header */
+.service-header {
+  padding: 7rem 2rem 2rem; /* top padding to avoid navbar */
+  text-align: center;
+  background-color: #fddde6;
+  box-shadow: inset 0 -4px 8px -4px #b5838d44;
+}
+
+.service-header h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.8rem;
+  color: #b5838d;
+  margin-bottom: 0.3rem;
+}
+
+.service-header p {
+  color: #6b4c56;
+  font-size: 1.2rem;
+}
+
+/* Categories */
+.category {
+  max-width: 1200px;
+  margin: 2rem auto 0;
+  padding: 0 2rem;
+}
+
+.category-title {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #b5838d;
+  border-bottom: 2px solid #e86a93;
+  padding-bottom: 0.3rem;
+}
+
+/* Service cards grid */
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Single service card */
+.service-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgb(232 106 147 / 0.15);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgb(232 106 147 / 0.3);
+}
+
+.service-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover img {
+  transform: scale(1.05);
+}
+
+.service-info {
+  padding: 1rem 1.5rem 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.service-info h3 {
+  color: #b5838d;
+  margin-bottom: 0.3rem;
+  font-size: 1.3rem;
+}
+
+.service-info p {
+  color: #6b4c56;
+  font-size: 0.95rem;
+  flex-grow: 1;
+}
+
+.price {
+  color: #e86a93;
+  font-weight: 700;
+  margin: 0.7rem 0;
+  font-size: 1.1rem;
+}
+
+label {
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: #2c2c2c;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Checkbox style */
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #b5838d;
+}
+
+/* Total section */
+.total-section {
+  max-width: 1200px;
+  margin: 3rem auto 4rem;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.total-section p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #b5838d;
+}
+
+#confirm {
+  background-color: #b5838d;
+  color: #fff;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#confirm:hover {
+  background-color: #9e5f70;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .service-header h1 {
+    font-size: 2rem;
+  }
+  .service-header p {
+    font-size: 1rem;
+  }
+  .service-card img {
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-cards {
+    grid-template-columns: 1fr;
+  }
+  .navbar {
+    padding: 0.8rem 1rem;
+  }
+  .nav-links {
+    gap: 0.8rem;
+  }
+  .logo img {
+    width: 50px;
+    height: 50px;
+  }
+}

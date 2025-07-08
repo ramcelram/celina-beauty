@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Réservation - Célina Beauté</title>
+    <link rel="stylesheet" href="reservation.css" />
+    <!-- SDK EmailJS v4 UMD -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.umd.min.js"></script>
+    <script src="reservation.js" defer></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <img
+          src="img/Black Minimalist Beauty Makeup Studio Logo.png"
+          alt="Logo Célina Beauté"
+        />
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="reservation.html">Réservation</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section class="form-section">
+        <h2>Vos informations</h2>
+
+        <!-- Récapitulatif des services -->
+        <p id="selectedServices"></p>
+        <p id="totalAmount"></p>
+
+        <!-- Formulaire de réservation -->
+        <form id="reservationForm">
+          <label for="name">Nom complet :</label>
+          <input type="text" id="name" required />
+
+          <label for="phone">Numéro de téléphone :</label>
+          <input type="tel" id="phone" required pattern="[0-9]+" />
+
+          <label for="date">Date souhaitée :</label>
+          <input type="date" id="date" required />
+
+          <button type="submit">Envoyer ma demande</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
